@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Question</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <!-- Card Header with Settings Icon -->
+    <div class="header">
+      <h1>Recycle Plastic</h1>
+      <button class="expand-card">My Card</button>
+      <span class="settings-icon">
+        <!-- Settings Icon (SVG or image) -->
+        <img src="assets/icons/setting _1.png" alt="Settings">
+      </span>
+    </div>
+
+    <!-- Input Field and Send Button -->
+    <div class="form-group">
+      <div class="input-container">
+        <input type="text" class="input-field" placeholder="Ask Eco AI...">
+        <button class="send-button">
+          <img src="assets/icons/send.png" alt="Send" class="send-icon">
+        </button>
+      </div>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info-box">
+      <p>Turn waste into a resource recycle your plastic</p>
+      <p><strong>Total Earning</strong></p>
+      <p><strong>Total Units</strong></p>
+      <p><strong>Location</strong></p>
+    </div>
+    
+<!-- Days Counter with Buttons -->
+<div class="form-infor">
+    <button class="add-button" onclick="decrement()">
+      <img src="assets/icons/minus.png" alt="Minus" class="icon">
+    </button>
+    <span id="days-counter">1</span> Units ~ $20.00
+    <button class="add-button" onclick="increment()">
+      <img src="assets/icons/plus.png" alt="Plus" class="icon">
+    </button>
+  </div>
+  
+      
+
+    <!-- File Upload Section -->
+    <div class="upload-section">
+      <div class="drag-upload">Drag&Drop/Browse</div>
+    </div>
+
+    <!-- Create Question Button -->
+    <button class="create-btn">Create Question</button>
+  </div>
+</body>
+</html>
