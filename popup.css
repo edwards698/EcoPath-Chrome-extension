@@ -1,382 +1,185 @@
 /* Center the card in the viewport */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafffc;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Card Container */
-  .card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(185, 255, 191, 0.1);
-    max-width: 500px;  /* Increased width */
-    width: 100%;
-  }
-  
-  /* Header Section */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .header h1 {
-    font-size: 18px;
-    color: #2c3e50;
-  }
-  
-  .expand-card {
-    background-color: #e8f0fe;
-    color: #007bff;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  
-  .expand-card:hover {
-    background-color: #d0e3fc;
-  }
-  
-  /* Input Fields and Buttons 
-  .form-group {
-    margin-bottom: 15px;
-  }
-  */
-  
-  /* Settings Icon */
-  .settings-icon {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-  }
-  
-  .settings-icon img {
-    width: 100%;
-    height: auto;
-  }
-  .info-box {
-    text-align: left; /* Align text to the left */
-    background-color: #bcffb8;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: 250px; /* Set a fixed width for consistency */
-    margin-bottom: 20px; /* Add spacing below the info box */
-  }
-  
-/* .form-infor container */
+  font-family: Arial, sans-serif;
+  background-color: #fafffc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Ensure no scrolling outside the card */
+}
+
+/* Card Container */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(185, 255, 191, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.expand-card {
+  background-color: #e8f0fe;
+  color: #007bff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.expand-card:hover {
+  background-color: #d0e3fc;
+}
+
+/* Settings Icon */
+.settings-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.settings-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Input Fields and Buttons */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  background: none;
+  outline: none;
+  color: #555;
+}
+
+.send-button {
+  background-color: #03A64A;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-button:hover {
+  background-color: #026873;
+}
+
+.send-icon {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+/* Info Box */
+.info-box {
+  background-color: #bcffb8;
+  color: #30602e;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Days Counter */
 .form-infor {
-    display: flex; /* Arrange child elements horizontally */
-    align-items: center;
-    justify-content: space-between; /* Distribute elements with space in between */
-    gap: 20px; /* Spacing between child elements */
-    background-color: #f5f5f5; /* Light background color */
-    padding: 20px; /* Add inner spacing */
-    border-radius: 40px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Limit the widget's width */
-    margin: auto; /* Center the widget horizontally */
-    margin-bottom: 20px; /* Spacing below the widget */
-  }
-  
-  /* Add button styling */
-  .add-button {
-    background-color: orange;
-    border: none;
-    color: white;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Icon inside the button */
-  .add-button .icon {
-    width: 30px; /* Adjust icon size */
-    height: 30x;
-  }
-  
-  /* Button hover effect */
-  .add-button:hover {
-    background-color: darkorange;
-  }
-  
-  
-  
-  .add-button {
-    background-color: orange;
-    border: none;
-    color: white;
-    font-size: 18px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .add-button:hover {
-    background-color: darkorange;
-  }
-  
-/* Container for the counter and buttons */
-.form-infor {
-    display: flex;
-    align-items: center; /* Vertically center-align the text and buttons */
-    gap: 10px; /* Space between elements */
-    background-color: #f5f5f5; /* Light background color */
-    padding: 10px 20px; /* Add padding around the container */
-    border-radius: 40px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Limit the widget's width */
-    margin: auto; /* Center the widget horizontally */
-    margin-bottom: 20px; /* Spacing below the widget */
-  }
-  
-  /* Style for the days counter (number of units) */
-  #days-counter {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-right: 8px; /* Space between the counter and the unit text */
-  }
-  
-  /* Style for the unit text and price */
-  .form-infor span {
-    font-size: 16px;
-    color: #333;
-  }
-  
-/* Container for the counter and buttons */
-.form-infor {
-    display: flex;
-    align-items: center; /* Vertically center-align the text and buttons */
-    gap: 10px; /* Space between elements */
-    background-color: #f5f5f5; /* Light background color */
-    padding: 10px 20px; /* Add padding around the container */
-    border-radius: 40px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 800px; /* Limit the widget's width */
-    margin: auto; /* Center the widget horizontally */
-    margin-bottom: 20px; /* Spacing below the widget */
-  }
-  
-  /* Style for the days counter (number of units) */
-  #days-counter {
-    font-size: 25px; /* Increased font size */
-    font-weight: bold;
-    color: #333;
-    margin-right: 8px; /* Space between the counter and the unit text */
-  }
-  
-  /* Style for the unit text and price */
-  .form-infor span {
-    font-size: 25px; /* Increased font size */
-    color: #30602e;
-  }
-  
-  /* Add button styles */
-  .add-button {
-    background-color: #28a745; /* Green color for the buttons */
-    border: none;
-    color: white;
-    font-size: 25px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .add-button:hover {
-    background-color: #218838; /* Darker green on hover */
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  
-  
-  /*
-  
-  .apply-button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .apply-button:hover {
-    background-color: darkorange;
-  }
-  
-  */
-  
-  .info-box {
-    text-align: left; /* Align text to the left */
-    background-color: #497c6e;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: 250px; /* Set a fixed width for consistency */
-  }
-    
-  .form-group {
-    width: 100%; /* Full width of the container */
-    max-width: 400px; /* Limit maximum width */
-    margin: auto; /* Center the form-group */
-  }
-  
-  .input-container {
-    display: flex; /* Arrange input and button horizontally */
-    align-items: center; /* Align input and button vertically */
-    background-color: #f5f5f5; /* Match the input field's background */
-    border: 1px dashed #ddd; /* Match input field's border */
-    border-radius: 6px; /* Same rounded corners */
-    overflow: hidden; /* Prevent content overflow at the corners */
-    margin-bottom: 10px; /* Vertical spacing between elements */
-  }
-  
-  .input-field {
-    flex: 1; /* Take up the remaining horizontal space */
-    padding: 10px 20px;
-    border: none; /* Remove default border */
-    font-size: 14px;
-    color: #555;
-    outline: none; /* Remove focus outline */
-    background: transparent; /* Inherit the container background */
-  }
-  
-  .send-button {
-    background-color: #03A64A; /* Button color */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .send-button:hover {
-    background-color: #026873; /* Darken on hover */
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
+#days-counter {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
 
+.add-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  
-  .send-icon {
-    width: 20px;
-    height: 20px;
-    filter: invert(1); /* Make the icon white */
-  }
-  
+.add-button:hover {
+  background-color: #218838;
+}
 
+.icon {
+  width: 20px;
+  height: 20px;
+}
 
-  
-  
-  .add-description {
-    background-color: #f4f5f7;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    color: #007bff;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-  }
-  
-  .answer-box {
-    width: calc(100% - 40px);
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #333;
-    resize: none;
-    float: left;
-  }
+/* Upload Section */
+.upload-section {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border: 1px dashed #ddd;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
 
+/* Submit Button */
+.create-btn {
+  width: 100%;
+  background-color: #03A64A;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  .add-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    padding: 8px 12px;
-    border-radius: 50%;
-    margin-left: 8px;
-    cursor: pointer;
-  }
-
-  
-  /* Upload Section */
-  .upload-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .upload-btn {
-    background-color: #f9e3e3;
-    color: #ff5252;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .upload-btn:hover {
-    background-color: #ffd6d6;
-  }
-  
-  .drag-upload {
-    background-color: #f5f5f5;
-    padding: 10px 20px;
-    border: 1px dashed #ddd;
-    border-radius: 6px;
-    text-align: center;
-    color: #555;
-    font-size: 14px;
-    flex: 1;
-    margin-bottom: 10px; /* Add vertical spacing between drag-upload elements */
-  }
-  
-  /* Create Button */
-  .create-btn {
-    width: 100%;
-    background-color: #03A64A;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px; /* Add spacing above the create button */
-  }
-  
-  
-  .create-btn:hover {
-    background-color: #026873;
-  }
-  
+.create-btn:hover {
+  background-color: #026873;
+}
